@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "animated-counter": [
+        "dist/animated-counter"
+      ],
+      "animated-counter/*": [
+        "dist/animated-counter/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
