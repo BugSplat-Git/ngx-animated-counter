@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { AnimatedCounterComponent } from './animated-counter.component';
+import { AnimatedCounter } from './animated-counter.component';
 
 
 
 @NgModule({
-  declarations: [AnimatedCounterComponent],
+  declarations: [AnimatedCounter],
   imports: [
   ],
-  exports: [AnimatedCounterComponent]
+  exports: [AnimatedCounter]
 })
 export class AnimatedCounterModule { }

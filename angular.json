@@ -15,7 +15,12 @@
             "tsConfig": "projects/animated-counter/tsconfig.lib.json",
             "project": "projects/animated-counter/ng-package.json"
           }
-        },
+        ,          "configurations": {
+            "production": {
+              "tsConfig": "projects/animated-counter/tsconfig.lib.prod.json"
+            }
+          }
+},
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -57,7 +62,7 @@
             "main": "projects/animated-counter-example/src/main.ts",
             "polyfills": "projects/animated-counter-example/src/polyfills.ts",
             "tsConfig": "projects/animated-counter-example/tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "projects/animated-counter-example/src/favicon.ico",
               "projects/animated-counter-example/src/assets"
@@ -80,7 +85,6 @@
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
