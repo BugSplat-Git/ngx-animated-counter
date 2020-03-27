@@ -1,6 +1,6 @@
 # animated-counter
 
-Animations for incrementing and decrementing numbers!
+Animations for incrementing numbers!
 
 ## Installation
 
@@ -9,7 +9,7 @@ Animations for incrementing and decrementing numbers!
 ## Usage
 Import AnimatedCounterModule into NgModule imports:
 ```js
-import { AnimatedCounterModule } from 'bs-animated-counter'
+import { AnimatedCounterModule } from 'bugsplat-animated-counter'
 
 @NgModule({
   ...
@@ -29,17 +29,12 @@ Add the counter to your page:
 ```
 
 ## Compatability
-Animated counter is dependant on Angular and has been tested with the following versions.
-
-|    Angular    | 
-| ------------- |
-|   8.x.x       | 
-|   9.x.x       | 
+Animated counter is built using Angular`>=6.0.0`.
 
 
 ## Credits
 
-animated-counter is an open source tool from BugSplat! 
+animated-counter is an open source tool from [BugSplat](https://www.bugsplat.com/)! BugSplat is a crash reporting tool used by developers to find when their software crashes while in use, and to collect data valuable to fixing those crashes.
 
 ## License
 
