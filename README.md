@@ -1,27 +1,46 @@
-# AnimatedCounter
+# animated-counter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.1.
+Animations for incrementing and decrementing numbers!
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm install --save bugsplat-animated-counter`
 
-## Code scaffolding
+## Usage
+Import AnimatedCounterModule into NgModule imports:
+```js
+import { AnimatedCounterModule } from 'bs-animated-counter'
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+  ...
+  imports: [
+    AnimatedCounterModule
+  ],
+  ...
+```
+The component takes one input in the form of an object, the min number, the max number, and the count duration in milliseconds. It is formatted as follows:
+```js
+public counter = {min: 20, max: 50, interval: 10}
+  ...
+```
+Add the counter to your page:
+```
+<animated-counter [params]="counter"></animated-counter>
+```
 
-## Build
+## Compatability
+Animated counter is dependant on Angular and has been tested with the following versions.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+|    Angular    | 
+| ------------- |
+|   8.x.x       | 
+|   9.x.x       | 
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Credits
 
-## Running end-to-end tests
+animated-counter is an open source tool from BugSplat! 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## License
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+MIT
