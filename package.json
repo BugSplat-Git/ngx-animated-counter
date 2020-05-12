@@ -9,7 +9,15 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/BugSplat-Git/ng-animated-counter"
+  },
+  "bugs": {
+    "url": "https://github.com/BugSplat-Git/ng-animated-counter/issues"
+  },
   "dependencies": {
     "@angular/animations": "~9.0.7",
     "@angular/common": "~9.0.7",
