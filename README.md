@@ -22,7 +22,7 @@ import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter'
 })
 ```
 
-The component takes one input with three properties. The properties are the start number, the end number and the amount of time to delay in miliseconds incrementing by 1:
+The component takes one input with three properties. The properties are the start number, the end number and the amount of time to delay in milliseconds incrementing by 1:
 
 ```ts
 public params: NgAnimatedCounterParams = { start: 20, end: 50, interval: 10 };
