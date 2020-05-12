@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('animated-counter-example app is running!');
+    expect(page.getTitleText()).toContain('@bugsplat/ng-animated-counter');
   });
 
   afterEach(async () => {
