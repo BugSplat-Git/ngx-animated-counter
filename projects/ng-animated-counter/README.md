@@ -1,24 +1,50 @@
-# NgAnimatedCounter
+# ng-animated-counter
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+Animations for incrementing numbers!
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name --project ng-animated-counter` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ng-animated-counter`.
-> Note: Don't forget to add `--project ng-animated-counter` or else it will be added to the default project in your `angular.json` file. 
+`npm i -s @bugsplat/ng-animated-counter`
 
-## Build
+## Usage
 
-Run `ng build ng-animated-counter` to build the project. The build artifacts will be stored in the `dist/` directory.
+Add the NgAnimatedCounterModule to your module's imports array:
 
-## Publishing
+```ts
+import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter'
 
-After building your library with `ng build ng-animated-counter`, go to the dist folder `cd dist/@bugsplat/ng-animated-counter` and run `npm publish`.
+@NgModule({
+  ...
+  imports: [
+    NgAnimatedCounterModule
+  ],
+  ...
+})
+```
 
-## Running unit tests
+The component takes one input with three properties. The properties are the start number, the end number and the amount of time to delay in milliseconds incrementing by 1:
 
-Run `ng test ng-animated-counter` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```ts
+public params: NgAnimatedCounterParams = { start: 20, end: 50, interval: 10 };
+```
 
-## Further help
+Add the counter to your component's template:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```html
+<ng-animated-counter [params]="params"></ng-animated-counter>
+```
+
+## Compatability
+
+ng-animated-counter is built using Angular `>=6.0.0`.
+
+## Credits
+
+ng-animated-counter is an open source tool from [BugSplat](https://www.bugsplat.com/)! BugSplat is a crash reporting tool used by developers to find when their software crashes while in use, and to collect data valuable to fixing those crashes. If you're interested in crash reporting, check out our [Angular](https://www.bugsplat.com/docs/sdk/angular/) integration. 
+
+With :heart:  
+BugSplat
+
+## License
+
+MIT
