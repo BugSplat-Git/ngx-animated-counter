@@ -14,13 +14,13 @@
           "options": {
             "tsConfig": "projects/ng-animated-counter/tsconfig.lib.json",
             "project": "projects/ng-animated-counter/ng-package.json"
-          }
-        ,          "configurations": {
+          },
+          "configurations": {
             "production": {
               "tsConfig": "projects/ng-animated-counter/tsconfig.lib.prod.json"
             }
           }
-},
+        },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
@@ -163,6 +163,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "animated-counter"
+    }
+  },
+  "defaultProject": "animated-counter",
+  "cli": {
+    "analytics": "7effc4cb-430c-4ee5-8031-84ff37987ae7"
+  }
 }
