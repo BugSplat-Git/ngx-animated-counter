@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-prod": "ng build ng-animated-counter --prod && cp README.md dist/@bugsplat/ng-animated-counter",
+    "release": "npm run build-prod && cd dist/@bugsplat/ng-animated-counter && npm publish"
   },
   "private": false,
   "license": "MIT",
