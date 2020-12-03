@@ -22,7 +22,13 @@ export class NgAnimatedCounter implements OnDestroy {
             .pipe(
               mapTo(this.positiveOrNegative(end, this.current)),
               startWith(this.current),
-              scan((acc: number, curr: number) => acc + curr),
+              scan((acc: number, curr: number) => {
+                if (value.increment) {
+                  return acc + value.increment;
+                }
+
+                return acc + curr;
+              }),
               takeWhile(this.isApproachingRange(end, this.current))
             )
         })

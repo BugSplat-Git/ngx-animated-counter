@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgAnimatedCounterParams } from 'projects/ng-animated-counter/src'; // TODO BG fix path
+import { NgAnimatedCounterParams } from 'projects/ng-animated-counter/src';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +12,5 @@ export class AppComponent {
   public params0: NgAnimatedCounterParams = { start: 0, end: 100, interval: 100 };
   public params1: NgAnimatedCounterParams = { start: 1000, end: 10000, interval: 10 };
   public params2: NgAnimatedCounterParams = { start: 100, end: 0, interval: 100 };
+  public params3: NgAnimatedCounterParams = { start: 0, end: 123123123123, interval: 10, increment: 123123 };
 }
