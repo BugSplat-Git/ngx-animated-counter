@@ -8,7 +8,7 @@ Animations for incrementing numbers!
 
 ## Usage
 
-Add the NgAnimatedCounterModule to your module's imports array:
+Add the NgAnimatedCounterModule to your module's imports:
 
 ```ts
 import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter'
@@ -22,10 +22,10 @@ import { NgAnimatedCounterModule } from '@bugsplat/ng-animated-counter'
 })
 ```
 
-The component takes one input with three properties. The properties are the start number, the end number and the amount of time to delay in milliseconds incrementing by 1:
+The component takes one input with three properties. The properties are the start number, the end number and the amount of time to delay in milliseconds incrementing by 1 or an optional increment value:
 
 ```ts
-public params: NgAnimatedCounterParams = { start: 20, end: 50, interval: 10 };
+public params: NgAnimatedCounterParams = { start: 20, end: 220, interval: 10, increment: 20 };
 ```
 
 Add the counter to your component's template:
