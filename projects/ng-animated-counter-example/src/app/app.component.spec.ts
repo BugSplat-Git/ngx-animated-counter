@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('@bugsplat/ng-animated-counter');
   });
 
-  it('should render 3 ng-animated-counters', () => {
+  it('should render 4 ng-animated-counters', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('ng-animated-counter').length).toEqual(3);
+    expect(compiled.querySelectorAll('ng-animated-counter').length).toEqual(4);
   });
 });
