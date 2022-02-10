@@ -28,18 +28,6 @@
             "tsConfig": "projects/ngx-animated-counter/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-animated-counter/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-animated-counter/tsconfig.lib.json",
-              "projects/ngx-animated-counter/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -140,19 +128,6 @@
               "projects/ngx-animated-counter-example/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-animated-counter-example/tsconfig.app.json",
-              "projects/ngx-animated-counter-example/tsconfig.spec.json",
-              "projects/ngx-animated-counter-example/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         },
         "e2e": {
