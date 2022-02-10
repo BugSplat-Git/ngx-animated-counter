@@ -138,18 +138,6 @@
             ],
             "scripts": []
           }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ngx-animated-counter-example/e2e/protractor.conf.js",
-            "devServerTarget": "ngx-animated-counter-example:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ngx-animated-counter-example:serve:production"
-            }
-          }
         }
       }
     }

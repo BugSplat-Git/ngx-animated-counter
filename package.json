@@ -7,7 +7,6 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
     "build-prod": "ng build ngx-animated-counter --configuration production && cp README.md dist/@bugsplat/ngx-animated-counter",
     "release": "npm run build-prod && cd dist/@bugsplat/ngx-animated-counter && npm publish"
   },
@@ -44,7 +43,6 @@
     "@angular/compiler-cli": "~13.2.2",
     "@angular/language-service": "~13.2.2",
     "@types/jasmine": "~3.6.0",
-    "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "5.3.0",
     "@typescript-eslint/parser": "5.3.0",
@@ -57,7 +55,6 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
     "ng-packagr": "^13.2.1",
-    "protractor": "~7.0.0",
     "ts-node": "~7.0.0",
     "typescript": "^4.5.5"
   }
