@@ -5,10 +5,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:prod": "ng build --configuration production",
     "test": "ng test",
     "lint": "ng lint",
-    "build-prod": "ng build ngx-animated-counter --configuration production && cp README.md dist/@bugsplat/ngx-animated-counter",
-    "release": "npm run build-prod && cd dist/@bugsplat/ngx-animated-counter && npm publish"
+    "release": "npm run build:prod && cd dist/@bugsplat/ngx-animated-counter && npm publish"
   },
   "private": false,
   "license": "MIT",
