@@ -1,19 +1,19 @@
 import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { NgxAnimatedCounter } from './ngx-animated-counter.component';
+import { NgxAnimatedCounterComponent } from './ngx-animated-counter.component';
 
 describe('NgxAnimatedCounter', () => {
-  let component: NgxAnimatedCounter;
-  let fixture: ComponentFixture<NgxAnimatedCounter>;
+  let component: NgxAnimatedCounterComponent;
+  let fixture: ComponentFixture<NgxAnimatedCounterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxAnimatedCounter ]
+      declarations: [ NgxAnimatedCounterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NgxAnimatedCounter);
+    fixture = TestBed.createComponent(NgxAnimatedCounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

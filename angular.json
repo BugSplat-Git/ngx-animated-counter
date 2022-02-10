@@ -28,6 +28,15 @@
             "tsConfig": "projects/ngx-animated-counter/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-animated-counter/karma.conf.js"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "projects/ngx-animated-counter/**/*.ts",
+              "projects/ngx-animated-counter/**/*.html"
+            ]
+          }
         }
       }
     },
@@ -145,8 +154,9 @@
       }
     }
   },
-  "defaultProject": "animated-counter",
+  "defaultProject": "ngx-animated-counter",
   "cli": {
-    "analytics": "7effc4cb-430c-4ee5-8031-84ff37987ae7"
+    "analytics": "7effc4cb-430c-4ee5-8031-84ff37987ae7",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

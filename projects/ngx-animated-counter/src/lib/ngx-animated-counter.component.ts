@@ -8,7 +8,7 @@ import { NgxAnimatedCounterParams } from './ngx-animated-counter-params';
   templateUrl: 'ngx-animated-counter.component.html',
   styleUrls: ['ngx-animated-counter.component.scss']
 })
-export class NgxAnimatedCounter implements OnDestroy {
+export class NgxAnimatedCounterComponent implements OnDestroy {
   @Input() set params(value: NgxAnimatedCounterParams) {
     if (this._counterSubscription) {
       this._counterSubscription.unsubscribe();

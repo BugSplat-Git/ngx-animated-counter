@@ -3,5 +3,5 @@
  */
 
  export { NgxAnimatedCounterModule } from './lib/ngx-animated-counter.module';
- export { NgxAnimatedCounter } from './lib/ngx-animated-counter.component';
+ export { NgxAnimatedCounterComponent as NgxAnimatedCounter } from './lib/ngx-animated-counter.component';
  export { NgxAnimatedCounterParams } from './lib/ngx-animated-counter-params';
