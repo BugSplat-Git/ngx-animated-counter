@@ -1,5 +1,5 @@
 {
-  "name": "ng-animated-counter",
+  "name": "ngx-animated-counter",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -8,17 +8,17 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-prod": "ng build ng-animated-counter --prod && cp README.md dist/@bugsplat/ng-animated-counter",
-    "release": "npm run build-prod && cd dist/@bugsplat/ng-animated-counter && npm publish"
+    "build-prod": "ng build ngx-animated-counter --prod && cp README.md dist/@bugsplat/ngx-animated-counter",
+    "release": "npm run build-prod && cd dist/@bugsplat/ngx-animated-counter && npm publish"
   },
   "private": false,
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BugSplat-Git/ng-animated-counter"
+    "url": "https://github.com/BugSplat-Git/ngx-animated-counter"
   },
   "bugs": {
-    "url": "https://github.com/BugSplat-Git/ng-animated-counter/issues"
+    "url": "https://github.com/BugSplat-Git/ngx-animated-counter/issues"
   },
   "dependencies": {
     "@angular/animations": "~11.0.3",

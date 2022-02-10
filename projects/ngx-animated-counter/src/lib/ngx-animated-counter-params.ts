@@ -1,4 +1,4 @@
-export interface NgAnimatedCounterParams {
+export interface NgxAnimatedCounterParams {
     start: number;
     end: number;
     interval: number;

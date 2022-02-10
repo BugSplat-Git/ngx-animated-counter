@@ -19,11 +19,11 @@
       "dom"
     ],
     "paths": {
-      "@bugsplat/ng-animated-counter": [
-        "dist/@bugsplat/ng-animated-counter"
+      "@bugsplat/ngx-animated-counter": [
+        "dist/@bugsplat/ngx-animated-counter"
       ],
-      "@bugsplat/ng-animated-counter/*": [
-        "dist/@bugsplat/ng-animated-counter/*"
+      "@bugsplat/ngx-animated-counter/*": [
+        "dist/@bugsplat/ngx-animated-counter/*"
       ]
     }
   },

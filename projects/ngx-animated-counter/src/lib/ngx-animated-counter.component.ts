@@ -1,15 +1,15 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { Subscription, timer, Subject } from 'rxjs';
 import { mapTo, scan, startWith, switchMap, takeWhile } from 'rxjs/operators';
-import { NgAnimatedCounterParams } from './ng-animated-counter-params';
+import { NgxAnimatedCounterParams } from './ngx-animated-counter-params';
 
 @Component({
-  selector: 'ng-animated-counter',
-  templateUrl: 'ng-animated-counter.component.html',
-  styleUrls: ['ng-animated-counter.component.scss']
+  selector: 'ngx-animated-counter',
+  templateUrl: 'ngx-animated-counter.component.html',
+  styleUrls: ['ngx-animated-counter.component.scss']
 })
-export class NgAnimatedCounter implements OnDestroy {
-  @Input() set params(value: NgAnimatedCounterParams) {
+export class NgxAnimatedCounter implements OnDestroy {
+  @Input() set params(value: NgxAnimatedCounterParams) {
     if (this._counterSubscription) {
       this._counterSubscription.unsubscribe();
     }

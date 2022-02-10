@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toContain('@bugsplat/ng-animated-counter');
+    expect(page.getTitleText()).toContain('@bugsplat/ngx-animated-counter');
   });
 
   afterEach(async () => {
