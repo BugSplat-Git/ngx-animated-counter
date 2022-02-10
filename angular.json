@@ -3,81 +3,83 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-animated-counter": {
+    "ngx-animated-counter": {
       "projectType": "library",
-      "root": "projects/ng-animated-counter",
-      "sourceRoot": "projects/ng-animated-counter/src",
+      "root": "projects/ngx-animated-counter",
+      "sourceRoot": "projects/ngx-animated-counter/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ng-animated-counter/tsconfig.lib.json",
-            "project": "projects/ng-animated-counter/ng-package.json"
+            "tsConfig": "projects/ngx-animated-counter/tsconfig.lib.json",
+            "project": "projects/ngx-animated-counter/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ng-animated-counter/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-animated-counter/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-animated-counter/src/test.ts",
-            "tsConfig": "projects/ng-animated-counter/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-animated-counter/karma.conf.js"
+            "main": "projects/ngx-animated-counter/src/test.ts",
+            "tsConfig": "projects/ngx-animated-counter/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-animated-counter/karma.conf.js"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "projects/ng-animated-counter/tsconfig.lib.json",
-              "projects/ng-animated-counter/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "projects/ngx-animated-counter/**/*.ts",
+              "projects/ngx-animated-counter/**/*.html"
             ]
           }
         }
       }
     },
-    "ng-animated-counter-example": {
+    "ngx-animated-counter-example": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
         }
       },
-      "root": "projects/ng-animated-counter-example",
-      "sourceRoot": "projects/ng-animated-counter-example/src",
+      "root": "projects/ngx-animated-counter-example",
+      "sourceRoot": "projects/ngx-animated-counter-example/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ng-animated-counter-example",
-            "index": "projects/ng-animated-counter-example/src/index.html",
-            "main": "projects/ng-animated-counter-example/src/main.ts",
-            "polyfills": "projects/ng-animated-counter-example/src/polyfills.ts",
-            "tsConfig": "projects/ng-animated-counter-example/tsconfig.app.json",
-            "aot": true,
+            "outputPath": "dist/ngx-animated-counter-example",
+            "index": "projects/ngx-animated-counter-example/src/index.html",
+            "main": "projects/ngx-animated-counter-example/src/main.ts",
+            "polyfills": "projects/ngx-animated-counter-example/src/polyfills.ts",
+            "tsConfig": "projects/ngx-animated-counter-example/tsconfig.app.json",
             "assets": [
-              "projects/ng-animated-counter-example/src/favicon.ico",
-              "projects/ng-animated-counter-example/src/assets"
+              "projects/ngx-animated-counter-example/src/favicon.ico",
+              "projects/ngx-animated-counter-example/src/assets"
             ],
             "styles": [
-              "projects/ng-animated-counter-example/src/styles.scss"
+              "projects/ngx-animated-counter-example/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/ng-animated-counter-example/src/environments/environment.ts",
-                  "with": "projects/ng-animated-counter-example/src/environments/environment.prod.ts"
+                  "replace": "projects/ngx-animated-counter-example/src/environments/environment.ts",
+                  "with": "projects/ngx-animated-counter-example/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -100,72 +102,49 @@
                 }
               ]
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ng-animated-counter-example:build"
+            "browserTarget": "ngx-animated-counter-example:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ng-animated-counter-example:build:production"
+              "browserTarget": "ngx-animated-counter-example:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ng-animated-counter-example:build"
+            "browserTarget": "ngx-animated-counter-example:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ng-animated-counter-example/src/test.ts",
-            "polyfills": "projects/ng-animated-counter-example/src/polyfills.ts",
-            "tsConfig": "projects/ng-animated-counter-example/tsconfig.spec.json",
-            "karmaConfig": "projects/ng-animated-counter-example/karma.conf.js",
+            "main": "projects/ngx-animated-counter-example/src/test.ts",
+            "polyfills": "projects/ngx-animated-counter-example/src/polyfills.ts",
+            "tsConfig": "projects/ngx-animated-counter-example/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-animated-counter-example/karma.conf.js",
             "assets": [
-              "projects/ng-animated-counter-example/src/favicon.ico",
-              "projects/ng-animated-counter-example/src/assets"
+              "projects/ngx-animated-counter-example/src/favicon.ico",
+              "projects/ngx-animated-counter-example/src/assets"
             ],
             "styles": [
-              "projects/ng-animated-counter-example/src/styles.scss"
+              "projects/ngx-animated-counter-example/src/styles.scss"
             ],
             "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ng-animated-counter-example/tsconfig.app.json",
-              "projects/ng-animated-counter-example/tsconfig.spec.json",
-              "projects/ng-animated-counter-example/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/ng-animated-counter-example/e2e/protractor.conf.js",
-            "devServerTarget": "ng-animated-counter-example:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "ng-animated-counter-example:serve:production"
-            }
           }
         }
       }
     }
   },
-  "defaultProject": "animated-counter",
+  "defaultProject": "ngx-animated-counter",
   "cli": {
-    "analytics": "7effc4cb-430c-4ee5-8031-84ff37987ae7"
+    "analytics": "7effc4cb-430c-4ee5-8031-84ff37987ae7",
+    "defaultCollection": "@angular-eslint/schematics"
   }
 }

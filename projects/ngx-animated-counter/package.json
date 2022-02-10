@@ -1,0 +1,19 @@
+{
+  "name": "@bugsplat/ngx-animated-counter",
+  "version": "1.2.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BugSplat-Git/ngx-animated-counter"
+  },
+  "bugs": {
+    "url": "https://github.com/BugSplat-Git/ngx-animated-counter/issues"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "peerDependencies": {
+    "@angular/common": ">=6.0.0",
+    "@angular/core": ">=6.0.0"
+  }
+}
