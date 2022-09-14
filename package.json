@@ -5,11 +5,13 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --configuration production",
+    "build:lib": "ng build ngx-animated-counter --configuration production",
     "build:example": "ng build ngx-animated-counter-example --configuration production --base-href /ngx-animated-counter-example/",
+    "postbuild:lib": "copyfiles README.md LICENSE.md dist/@bugsplat/ngx-animated-counter",
     "test": "ng test",
     "lint": "ng lint",
-    "release": "npm run build:prod && cd dist/@bugsplat/ngx-animated-counter && npm publish -access public"
+    "prerelease": "npm run build:lib",
+    "release": "cd dist/@bugsplat/ngx-animated-counter && npm publish -access public"
   },
   "private": false,
   "license": "MIT",
@@ -47,6 +49,7 @@
     "@types/node": "^12.11.1",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.23.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
