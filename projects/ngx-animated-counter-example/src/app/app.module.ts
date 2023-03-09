@@ -5,15 +5,9 @@ import { CommonModule } from '@angular/common';
 import { NgxAnimatedCounterModule } from 'projects/ngx-animated-counter/src'; // TODO BG fix path
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    NgxAnimatedCounterModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, CommonModule, NgxAnimatedCounterModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

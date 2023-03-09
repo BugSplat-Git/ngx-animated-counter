@@ -8,25 +8,21 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [
-        NgxAnimatedCounterModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [NgxAnimatedCounterModule],
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.debugElement.componentInstance;
-  })
+  });
 
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have set title to \'@bugsplat/ngx-animated-counter\'', () => {
+  it("should have set title to '@bugsplat/ngx-animated-counter'", () => {
     expect(component.title).toEqual('@bugsplat/ngx-animated-counter');
   });
 

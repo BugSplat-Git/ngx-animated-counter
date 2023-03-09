@@ -1,6 +1,6 @@
 export interface NgxAnimatedCounterParams {
-    start: number;
-    end: number;
-    interval: number;
-    increment?: number;
+  start: number;
+  end: number;
+  interval: number;
+  increment?: number;
 }

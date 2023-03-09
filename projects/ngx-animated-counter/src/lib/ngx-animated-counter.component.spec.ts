@@ -1,4 +1,9 @@
-import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import {
+  ComponentFixture,
+  fakeAsync,
+  TestBed,
+  tick,
+} from '@angular/core/testing';
 import { NgxAnimatedCounterComponent } from './ngx-animated-counter.component';
 
 describe('NgxAnimatedCounter', () => {
@@ -7,9 +12,8 @@ describe('NgxAnimatedCounter', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ NgxAnimatedCounterComponent ]
-    })
-    .compileComponents();
+      declarations: [NgxAnimatedCounterComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -21,7 +25,7 @@ describe('NgxAnimatedCounter', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-  
+
   it('should count from start to end', fakeAsync(() => {
     const interval = 10;
     const start = 0;
@@ -31,7 +35,7 @@ describe('NgxAnimatedCounter', () => {
     component.params = {
       start,
       end,
-      interval
+      interval,
     };
 
     tick(totalTime);
@@ -49,13 +53,13 @@ describe('NgxAnimatedCounter', () => {
       start,
       end,
       interval,
-      increment
+      increment,
     };
 
     tick(0);
     const result = component.current;
     tick(totalTime);
-    
+
     expect(result).toEqual(increment);
   }));
 
@@ -68,13 +72,13 @@ describe('NgxAnimatedCounter', () => {
     component.params = {
       start,
       end,
-      interval
+      interval,
     };
 
     tick(0);
     const result = component.current;
     tick(totalTime);
-    
+
     expect(result).toEqual(1);
   }));
 });
