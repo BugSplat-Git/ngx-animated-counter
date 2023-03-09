@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
+    "prestart": "npm run build:lib",
     "start": "ng serve",
     "build": "ng build",
     "build:lib": "ng build ngx-animated-counter --configuration production",
