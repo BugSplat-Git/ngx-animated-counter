@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed } from "@angular/core/testing";
-import { NgxAnimatedCounterModule } from "@bugsplat/ngx-animated-counter";
-import { AppComponent } from "./app.component";
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NgxAnimatedCounterModule } from '@bugsplat/ngx-animated-counter';
+import { AppComponent } from './app.component';
 
-describe("AppComponent", () => {
+describe('AppComponent', () => {
   let fixture: ComponentFixture<AppComponent>;
   let component: AppComponent;
 
@@ -18,16 +18,16 @@ describe("AppComponent", () => {
     component = fixture.debugElement.componentInstance;
   });
 
-  it("should create the app", () => {
+  it('should create the app', () => {
     expect(component).toBeTruthy();
   });
 
   it("should have set title to '@bugsplat/ngx-animated-counter'", () => {
-    expect(component.title).toEqual("@bugsplat/ngx-animated-counter");
+    expect(component.title).toEqual('@bugsplat/ngx-animated-counter');
   });
 
-  it("should render 4 ngx-animated-counters", () => {
+  it('should render 4 ngx-animated-counters', () => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll("ngx-animated-counter").length).toEqual(4);
+    expect(compiled.querySelectorAll('ngx-animated-counter').length).toEqual(4);
   });
 });

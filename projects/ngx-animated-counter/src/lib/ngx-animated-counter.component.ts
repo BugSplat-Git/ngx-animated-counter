@@ -1,12 +1,12 @@
-import { Component, Input, OnDestroy } from "@angular/core";
-import { Subscription, timer, Subject } from "rxjs";
-import { mapTo, scan, startWith, switchMap, takeWhile } from "rxjs/operators";
-import { NgxAnimatedCounterParams } from "./ngx-animated-counter-params";
+import { Component, Input, OnDestroy } from '@angular/core';
+import { Subscription, timer, Subject } from 'rxjs';
+import { mapTo, scan, startWith, switchMap, takeWhile } from 'rxjs/operators';
+import { NgxAnimatedCounterParams } from './ngx-animated-counter-params';
 
 @Component({
-  selector: "ngx-animated-counter",
-  templateUrl: "ngx-animated-counter.component.html",
-  styleUrls: ["ngx-animated-counter.component.scss"],
+  selector: 'ngx-animated-counter',
+  templateUrl: 'ngx-animated-counter.component.html',
+  styleUrls: ['ngx-animated-counter.component.scss'],
 })
 export class NgxAnimatedCounterComponent implements OnDestroy {
   @Input() set params(value: NgxAnimatedCounterParams) {

@@ -3,10 +3,10 @@ import {
   fakeAsync,
   TestBed,
   tick,
-} from "@angular/core/testing";
-import { NgxAnimatedCounterComponent } from "./ngx-animated-counter.component";
+} from '@angular/core/testing';
+import { NgxAnimatedCounterComponent } from './ngx-animated-counter.component';
 
-describe("NgxAnimatedCounter", () => {
+describe('NgxAnimatedCounter', () => {
   let component: NgxAnimatedCounterComponent;
   let fixture: ComponentFixture<NgxAnimatedCounterComponent>;
 
@@ -22,11 +22,11 @@ describe("NgxAnimatedCounter", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it("should count from start to end", fakeAsync(() => {
+  it('should count from start to end', fakeAsync(() => {
     const interval = 10;
     const start = 0;
     const end = 100;
@@ -42,7 +42,7 @@ describe("NgxAnimatedCounter", () => {
     expect(component.current).toEqual(end);
   }));
 
-  it("should count by increment if provided", fakeAsync(() => {
+  it('should count by increment if provided', fakeAsync(() => {
     const interval = 10;
     const start = 0;
     const end = 1000;
@@ -63,7 +63,7 @@ describe("NgxAnimatedCounter", () => {
     expect(result).toEqual(increment);
   }));
 
-  it("should count by 1 if increment not provided", fakeAsync(() => {
+  it('should count by 1 if increment not provided', fakeAsync(() => {
     const interval = 10;
     const start = 0;
     const end = 1000;

@@ -1,5 +1,5 @@
-import { NgModule } from "@angular/core";
-import { NgxAnimatedCounterComponent } from "./ngx-animated-counter.component";
+import { NgModule } from '@angular/core';
+import { NgxAnimatedCounterComponent } from './ngx-animated-counter.component';
 
 @NgModule({
   declarations: [NgxAnimatedCounterComponent],
