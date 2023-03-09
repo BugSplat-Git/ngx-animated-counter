@@ -1,7 +1,10 @@
 [![bugsplat-github-banner-basic-outline](https://user-images.githubusercontent.com/20464226/149019306-3186103c-5315-4dad-a499-4fd1df408475.png)](https://bugsplat.com)
 <br/>
-# <div align="center">BugSplat</div> 
+
+# <div align="center">BugSplat</div>
+
 ### **<div align="center">Crash and error reporting built for busy developers.</div>**
+
 <div align="center">
     <a href="https://twitter.com/BugSplatCo">
         <img alt="Follow @bugsplatco on Twitter" src="https://img.shields.io/twitter/follow/bugsplatco?label=Follow%20BugSplat&style=social">
@@ -49,7 +52,7 @@ Add the counter to your component's template:
 
 ## 🐛 About
 
-[ngx-animated-counter](https://github.com/BugSplat-Git/ngx-animated-counter) is an open source tool from [BugSplat](https://www.bugsplat.com/)! BugSplat is a crash and error reporting tool used by developers to find when their software crashes while in use, and to collect data valuable to fixing those errors. If you're interested in error reporting, check out our [Angular](https://docs.bugsplat.com/introduction/getting-started/integrations/web/angular) integration. 
+[ngx-animated-counter](https://github.com/BugSplat-Git/ngx-animated-counter) is an open source tool from [BugSplat](https://www.bugsplat.com/)! BugSplat is a crash and error reporting tool used by developers to find when their software crashes while in use, and to collect data valuable to fixing those errors. If you're interested in error reporting, check out our [Angular](https://docs.bugsplat.com/introduction/getting-started/integrations/web/angular) integration.
 
 With :heart:  
 BugSplat
