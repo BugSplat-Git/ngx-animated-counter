@@ -1,6 +1,13 @@
 import { Component, Input, OnDestroy } from '@angular/core';
 import { Subscription, timer, Subject } from 'rxjs';
-import { mapTo, scan, startWith, switchMap, takeWhile } from 'rxjs/operators';
+import {
+  endWith,
+  mapTo,
+  scan,
+  startWith,
+  switchMap,
+  takeWhile,
+} from 'rxjs/operators';
 import { NgxAnimatedCounterParams } from './ngx-animated-counter-params';
 
 @Component({
@@ -23,12 +30,12 @@ export class NgxAnimatedCounterComponent implements OnDestroy {
             startWith(this.current),
             scan((acc: number, curr: number) => {
               if (value.increment) {
-                return acc + value.increment;
+                return acc + value.increment * curr;
               }
-
               return acc + curr;
             }),
-            takeWhile(this.isApproachingRange(end, this.current))
+            takeWhile(this.isApproachingRange(end, this.current)),
+            endWith(value.end)
           );
         })
       )

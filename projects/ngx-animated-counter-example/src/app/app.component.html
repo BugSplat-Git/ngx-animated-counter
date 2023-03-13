@@ -11,17 +11,8 @@
           {{ title }}
         </a>
       </h1>
-      <div class="row">
-        <ngx-animated-counter [params]="params0"></ngx-animated-counter>
-      </div>
-      <div class="row">
-        <ngx-animated-counter [params]="params1"></ngx-animated-counter>
-      </div>
-      <div class="row">
-        <ngx-animated-counter [params]="params2"></ngx-animated-counter>
-      </div>
-      <div class="row">
-        <ngx-animated-counter [params]="params3"></ngx-animated-counter>
+      <div class="row" *ngFor="let params of paramsVariations">
+        <ngx-animated-counter [params]="params"></ngx-animated-counter>
       </div>
     </div>
   </div>
