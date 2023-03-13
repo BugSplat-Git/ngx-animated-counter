@@ -42,7 +42,7 @@ describe('NgxAnimatedCounter', () => {
     expect(component.current).toEqual(end);
   }));
 
-  it('should count by increment if provided', fakeAsync(() => {
+  it('should count up by increment if provided', fakeAsync(() => {
     const interval = 10;
     const start = 0;
     const end = 1000;
@@ -63,7 +63,7 @@ describe('NgxAnimatedCounter', () => {
     expect(result).toEqual(increment);
   }));
 
-  it('should count by 1 if increment not provided', fakeAsync(() => {
+  it('should count up by 1 if increment not provided', fakeAsync(() => {
     const interval = 10;
     const start = 0;
     const end = 1000;
@@ -80,5 +80,81 @@ describe('NgxAnimatedCounter', () => {
     tick(totalTime);
 
     expect(result).toEqual(1);
+  }));
+
+  it('should count down by increment if provided', fakeAsync(() => {
+    const interval = 10;
+    const start = 1000;
+    const end = 0;
+    const increment = 25;
+    const totalTime = interval * (start - end);
+
+    component.params = {
+      start,
+      end,
+      interval,
+      increment,
+    };
+
+    tick(0);
+    const result = component.current;
+    tick(totalTime);
+
+    expect(result).toEqual(start - increment);
+  }));
+
+  it('should count down by 1 if increment not provided', fakeAsync(() => {
+    const interval = 10;
+    const start = 1000;
+    const end = 0;
+    const totalTime = interval * (start - end);
+
+    component.params = {
+      start,
+      end,
+      interval,
+    };
+
+    tick(0);
+    const result = component.current;
+    tick(totalTime);
+
+    expect(result).toEqual(start - 1);
+  }));
+
+  it('should finish counting up with end value when value delta is not divisible by increment', fakeAsync(() => {
+    const interval = 10;
+    const start = 90;
+    const end = 100;
+    const increment = 7;
+    const totalTime = interval * (end - start);
+
+    component.params = {
+      start,
+      end,
+      interval,
+      increment,
+    };
+
+    tick(totalTime);
+    expect(component.current).toEqual(end);
+  }));
+
+  it('should finish counting down with end value when value delta is not divisible by increment', fakeAsync(() => {
+    const interval = 10;
+    const start = 100;
+    const end = 90;
+    const increment = 7;
+    const totalTime = interval * (start - end);
+
+    component.params = {
+      start,
+      end,
+      interval,
+      increment,
+    };
+
+    tick(totalTime);
+    expect(component.current).toEqual(end);
   }));
 });

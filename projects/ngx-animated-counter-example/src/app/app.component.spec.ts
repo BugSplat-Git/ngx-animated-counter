@@ -26,8 +26,10 @@ describe('AppComponent', () => {
     expect(component.title).toEqual('@bugsplat/ngx-animated-counter');
   });
 
-  it('should render 4 ngx-animated-counters', () => {
+  it('should render ngx-animated-counter for each params variation', () => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelectorAll('ngx-animated-counter').length).toEqual(4);
+    fixture.detectChanges(); // run *ngFor
+    const renderedCounters = compiled.querySelectorAll('ngx-animated-counter');
+    expect(renderedCounters.length).toEqual(component.paramsVariations.length);
   });
 });

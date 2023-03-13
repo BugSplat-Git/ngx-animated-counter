@@ -8,26 +8,33 @@ import { NgxAnimatedCounterParams } from '@bugsplat/ngx-animated-counter';
 })
 export class AppComponent {
   public readonly title: string = '@bugsplat/ngx-animated-counter';
-
-  public params0: NgxAnimatedCounterParams = {
-    start: 0,
-    end: 100,
-    interval: 100,
-  };
-  public params1: NgxAnimatedCounterParams = {
-    start: 1000,
-    end: 10000,
-    interval: 10,
-  };
-  public params2: NgxAnimatedCounterParams = {
-    start: 100,
-    end: 0,
-    interval: 100,
-  };
-  public params3: NgxAnimatedCounterParams = {
-    start: 0,
-    end: 123123123123,
-    interval: 10,
-    increment: 123123,
-  };
+  public readonly paramsVariations: NgxAnimatedCounterParams[] = [
+    {
+      start: 0,
+      end: 100,
+      interval: 100,
+    },
+    {
+      start: 1000,
+      end: 10000,
+      interval: 10,
+    },
+    {
+      start: 100,
+      end: 0,
+      interval: 100,
+    },
+    {
+      start: 0,
+      end: 123123123123,
+      interval: 10,
+      increment: 123123,
+    },
+    {
+      start: 100,
+      end: 96,
+      interval: 3000,
+      increment: 3,
+    },
+  ];
 }
