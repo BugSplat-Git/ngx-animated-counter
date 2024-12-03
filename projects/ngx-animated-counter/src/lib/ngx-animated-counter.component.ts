@@ -11,9 +11,10 @@ import {
 import { NgxAnimatedCounterParams } from './ngx-animated-counter-params';
 
 @Component({
-  selector: 'ngx-animated-counter',
-  templateUrl: 'ngx-animated-counter.component.html',
-  styleUrls: ['ngx-animated-counter.component.scss'],
+    selector: 'ngx-animated-counter',
+    templateUrl: 'ngx-animated-counter.component.html',
+    styleUrls: ['ngx-animated-counter.component.scss'],
+    standalone: false
 })
 export class NgxAnimatedCounterComponent implements OnDestroy {
   @Input() set params(value: NgxAnimatedCounterParams) {
