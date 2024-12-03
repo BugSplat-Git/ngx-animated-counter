@@ -52,12 +52,15 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ngx-animated-counter-example",
+            "outputPath": {
+              "base": "dist/ngx-animated-counter-example"
+            },
             "index": "projects/ngx-animated-counter-example/src/index.html",
-            "main": "projects/ngx-animated-counter-example/src/main.ts",
-            "polyfills": "projects/ngx-animated-counter-example/src/polyfills.ts",
+            "polyfills": [
+              "projects/ngx-animated-counter-example/src/polyfills.ts"
+            ],
             "tsConfig": "projects/ngx-animated-counter-example/tsconfig.app.json",
             "assets": [
               "projects/ngx-animated-counter-example/src/favicon.ico",
@@ -67,12 +70,11 @@
               "projects/ngx-animated-counter-example/src/styles.scss"
             ],
             "scripts": [],
-            "vendorChunk": true,
             "extractLicenses": false,
-            "buildOptimizer": false,
             "sourceMap": true,
             "optimization": false,
-            "namedChunks": true
+            "namedChunks": true,
+            "browser": "projects/ngx-animated-counter-example/src/main.ts"
           },
           "configurations": {
             "production": {
@@ -87,8 +89,6 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",

@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { NgxAnimatedCounterParams } from '@bugsplat/ngx-animated-counter';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent {
   public readonly title: string = '@bugsplat/ngx-animated-counter';
